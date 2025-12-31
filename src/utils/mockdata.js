@@ -1,30 +1,4 @@
-#namaste react# reactproject
-useEffect(()=>{fetchData();},[])
-
-const fetchData = async () => {
-  try {
-    const data = await fetch(
-      "https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING"
-    );
-
-    const json = await data.json();
-    console.log("FULL JSON 👉", json);
-
-    const cards = json?.data?.cards;
-
-    const restaurantCard = cards?.find(
-      (card) =>
-        card?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
-
-    setListofRestaurant(
-      restaurantCard?.card?.card?.gridElements?.infoWithStyle?.restaurants || []
-    );
-  } catch (error) {
-    console.error("FETCH ERROR:", error);
-  }
-};
-onst mockData = [
+const mockData = [
   {
     info: {
       id: "1",
@@ -33,7 +7,7 @@ onst mockData = [
       avgRating: 4.6,
       costForTwo: "₹500 for two",
       imageUrl:
-        "https://images.unsplash.com/photo-1600628422019-7bbf39fdbb28",
+        "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&w=800&q=80",
       sla: { deliveryTime: 30 },
     },
   },
@@ -69,7 +43,7 @@ onst mockData = [
       avgRating: 4.1,
       costForTwo: "₹600 for two",
       imageUrl:
-        "https://images.unsplash.com/photo-1548365328-5b849e6b46f9",
+        "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&w=800&q=80",
       sla: { deliveryTime: 32 },
     },
   },
@@ -116,7 +90,7 @@ onst mockData = [
       cuisines: ["Burgers", "Fast Food"],
       avgRating: 4.0,
       costForTwo: "₹250 for two",
-      imageUrl:c
+      imageUrl:
         "https://images.unsplash.com/photo-1568901346375-23c9450c58cd",
       sla: { deliveryTime: 20 },
     },
@@ -165,7 +139,7 @@ onst mockData = [
       avgRating: 4.6,
       costForTwo: "₹280 for two",
       imageUrl:
-        "https://images.unsplash.com/photo-1505253216365-72c88c47f8d6",
+        "https://images.unsplash.com/photo-1560008581-09826d1de69e?auto=format&w=800&q=80",
       sla: { deliveryTime: 21 },
     },
   },
@@ -177,7 +151,7 @@ onst mockData = [
       avgRating: 4.2,
       costForTwo: "₹350 for two",
       imageUrl:
-        "https://images.unsplash.com/photo-1497051788611-2c64812349a8",
+        "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&w=800&q=80",
       sla: { deliveryTime: 23 },
     },
   },
@@ -201,7 +175,7 @@ onst mockData = [
       avgRating: 4.4,
       costForTwo: "₹400 for two",
       imageUrl:
-        "https://images.unsplash.com/photo-1627662236973-4fd835b1c25c",
+        "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&w=800&q=80",
       sla: { deliveryTime: 29 },
     },
   },

@@ -1,0 +1,13 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "Namaste React by Tejaswi",
+  "scripts": {},
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.3"
+  }
+}
